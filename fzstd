@@ -1,4 +1,8 @@
 #!/bin/bash
+# Example usage: hashcat.bin --help | fzstd
+# Then type the string you are seeking (ex : NTLM) and press enter
+# Vim will be opened at the line matching the selected string in fzf
+# Set it in path or through an alias for an easy use
 
 # Create a temporary file
 temp_file=$(mktemp)
