@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Create a temporary file
+temp_file=$(mktemp)
+
+# Capture stdin to the temporary file
+cat > "$temp_file"
+
+# Use `awk` to add line numbers, pass through `fzf` to select, and get the line number
+selected=$(awk '{print NR " " $0}' "$temp_file" | fzf | awk '{print $1}')
+
+# Edit the temporary file at the selected line, if any
+if [[ ! -z $selected ]]; then
+  # Explicitly redirect vim's stdin from the terminal
+  < /dev/tty vim +"$selected" "$temp_file"
+  echo "Edited content saved to $temp_file"
+else
+  echo "No selection made."
+fi
+
