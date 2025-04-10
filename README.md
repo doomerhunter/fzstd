@@ -10,6 +10,6 @@ Example usage:
 hashcat.bin --help | fzstd
 ```
 
-Requires fzf and vim (or another editor, references by the `EDITOR` environment variable).
+Requires fzf and vim (or another editor, referenced by the `EDITOR` environment variable).
 
 ![](https://github.com/doomerhunter/fzstd/blob/main/fzstd.gif)
