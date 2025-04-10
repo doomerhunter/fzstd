@@ -1,6 +1,6 @@
 # fzstd
 
-Fuzzy find using `fzf` to search a string from `STDIN` and open `vim` at the right line.
+Fuzzy find using `fzf` to search a string from `STDIN` and open your favorite editor at the right line.
 
 Useful to find a search term and immediately get the surrounding context without using grep -A -B.
 
